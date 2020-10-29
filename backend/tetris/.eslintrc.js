@@ -1,7 +1,11 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
+  
+  // ВАЖНО!
+  files: ["*.ts", "*.tsx"],
+  
   parserOptions: {
-    project: 'tsconfig.json',
+    project: './backend/tetris/tsconfig.json',
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
