@@ -1,0 +1,16 @@
+<header>
+</header>
+<main>
+  <form id="login-form" class="card" [formGroup]="loginFormGroup" (ngSubmit)="login()">
+    <div class="card-body form-body">
+      <span class="card-title" id="login-title">Login to play!</span>
+      <input formControlName="loginField" name="login" type="text" required placeholder="Login" name="login" />
+      <input formControlName="passwordField" name="password" type="password" required placeholder="Password"
+        name="password" />
+      <button type="submit" class="btn btn-warning">Login</button>
+    </div>
+    <a [routerLink]="['/signup']" routerLinkActive="router-link-active"  type="button" class="btn btn-link">Signup</a>
+  </form>
+</main>
+<footer>
+</footer>

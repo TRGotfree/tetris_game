@@ -1,0 +1,17 @@
+<header>
+</header>
+<main>
+  <form id="login-form" class="card" [formGroup]="signUpFormGroup" (ngSubmit)="signup($event)">
+    <div class="card-body form-body">
+      <span class="card-title" id="login-title">Sign in to play!</span>
+      <input formControlName="loginField" name="login" type="text" required placeholder="Login" />
+      <input formControlName="nickNameField" name="nickName" type="text" required placeholder="Nick name" />
+      <input formControlName="passwordField" name="password" type="password" required placeholder="Password" />
+      <input formControlName="passwordRepeatField" name="passwordRepeat" type="password" required
+        placeholder="Repeat the password" />
+      <button type="submit" class="btn btn-warning">Submit</button>
+    </div>
+  </form>
+</main>
+<footer>
+</footer>
