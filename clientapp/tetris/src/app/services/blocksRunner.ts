@@ -68,7 +68,7 @@ export class BlocksRunner extends EventEmitter implements IBlocksRunner {
 
         if (direction == DIRECTIONS.ROTATE) {
             for (const row of currentCoordinats) {
-
+                
             }
         }
     }
@@ -77,5 +77,13 @@ export class BlocksRunner extends EventEmitter implements IBlocksRunner {
         setInterval(() => {
 
         }, this.timeout)
+    }
+
+
+    private rotate(currentCoordinats: number[][]) {
+        if (!currentCoordinats || currentCoordinats.length === 0)
+            throw new Error('Input parameter \'currentCoordinats\' for \'rotate\' is null or undefined!');
+
+        
     }
 }

@@ -1,4 +1,5 @@
 export interface IBlock {
-    readonly coordinats: number[][]
+    readonly verticalPositionCoordinats: number[][];
+    readonly horizontalPositionCoordinats: number[][];
     readonly color: string;
 }
