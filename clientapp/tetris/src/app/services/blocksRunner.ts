@@ -86,35 +86,6 @@ export class BlocksRunner extends EventEmitter implements IBlocksRunner {
         if (!block)
             throw new Error('Input parameter \'block\' for \'rotate\' is null or undefined!');
 
-        if (block.currentPosition == POSITIONS.HORIZONTAL) {
-
-            for (let i = 0; i < block.currentCoordinats.length; i++) {
-
-                if (block.defaultVPosCoordinats[i][0] + block.currentCoordinats[i][0] > environment.gameFieldMaxColumns)
-                    block.currentCoordinats[i][0] = (block.defaultVPosCoordinats[i][0] + block.currentCoordinats[i][0]) - ((block.defaultVPosCoordinats[i][0] + block.currentCoordinats[i][0]) - environment.gameFieldMaxColumns) - 1;
-                else
-                    block.currentCoordinats[i][0] = block.defaultVPosCoordinats[i][0] + block.currentCoordinats[i][0] - 1;
-
-                if (block.defaultVPosCoordinats[i][1] + block.currentCoordinats[i][1] > environment.gameFieldMaxLines)
-                    block.currentCoordinats[i][0] = ((block.defaultVPosCoordinats[i][1] + block.currentCoordinats[i][1]) - ((block.defaultVPosCoordinats[i][1] + block.currentCoordinats[i][1]) - environment.gameFieldMaxLines)) - 1;
-            }
-
-            block.currentPosition = POSITIONS.VERTICAL;
-
-        } else {
-
-            for (let i = 0; i < block.currentCoordinats.length; i++) {
-
-                if (block.defaultHPosCoordinats[i][0] + block.currentCoordinats[i][0] > environment.gameFieldMaxColumns)
-                    block.currentCoordinats[i][0] = (block.defaultHPosCoordinats[i][0] + block.currentCoordinats[i][0]) - ((block.defaultHPosCoordinats[i][0] + block.currentCoordinats[i][0]) - environment.gameFieldMaxColumns) - 1;
-                else
-                    block.currentCoordinats[i][0] = block.defaultHPosCoordinats[i][0] + block.currentCoordinats[i][0] - 1;
-
-                if (block.defaultHPosCoordinats[i][1] + block.currentCoordinats[i][1] > environment.gameFieldMaxLines)
-                    block.currentCoordinats[i][0] = ((block.defaultHPosCoordinats[i][1] + block.currentCoordinats[i][1]) - ((block.defaultVPosCoordinats[i][1] + block.currentCoordinats[i][1]) - environment.gameFieldMaxLines)) - 1;
-            }
-
-            block.currentPosition = POSITIONS.HORIZONTAL;
-        }
+        
     }
 }

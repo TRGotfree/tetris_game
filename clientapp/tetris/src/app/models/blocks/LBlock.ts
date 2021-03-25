@@ -4,13 +4,16 @@ import { IBlock } from "./IBlock";
 export class LBlock implements IBlock {
 
     constructor() {
-        this.currentPosition = POSITIONS.VERTICAL;
-        this.currentCoordinats = this.defaultVPosCoordinats;
     }
 
-    currentPosition: POSITIONS;
     currentCoordinats: number[][];
     readonly color: string = "#1976d2";
-    readonly defaultHPosCoordinats: number[][] = [[0, 0], [0, 1], [1, 1], [2, 1]];
-    readonly defaultVPosCoordinats: number[][] = [[1, 0], [0, 0], [0, 1], [0, 2]];
+    readonly maxLength: number = 3;
+    readonly initialPositions: number[][][] = [
+        [[1, -1], [1, -2], [1, -3], [1, -4]],
+        [[1, -3], [1, -2], [2, -2], [3, -2]],
+        [[1, -1], [2, -1], [2, -2], [2, -3]],
+        [[1, -3], [2, -3], [3, -3], [3, -2]]
+    ];
+    
 }

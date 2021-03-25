@@ -1,10 +1,8 @@
 import { POSITIONS } from "src/app/constantsAndEnums/positions";
 
 export interface IBlock {
-    readonly defaultVPosCoordinats: number[][];
-    readonly defaultHPosCoordinats: number[][];
+    readonly initialPositions: number[][][];
     readonly color: string;
-
-    currentPosition: POSITIONS;
+    readonly maxLength: number;
     currentCoordinats: number[][];
 }
