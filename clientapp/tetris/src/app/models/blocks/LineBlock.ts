@@ -7,6 +7,8 @@ export class LineBlock implements IBlock {
     }
 
     currentCoordinats: number[][];
+    currentInitialPositionIndex: number;
+
     readonly color: string = "#1976d2";
     readonly maxLength: number = 4;
     readonly initialPositions: number[][][] = [

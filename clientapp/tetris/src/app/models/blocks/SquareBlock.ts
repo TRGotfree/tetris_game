@@ -7,6 +7,8 @@ export class SquareBlock implements IBlock {
     }
 
     currentCoordinats: number[][];
+    currentInitialPositionIndex: number;
+
     readonly color: string = "#1976d2";
     readonly maxLength: number = 2;
     readonly initialPositions: number[][][] = [

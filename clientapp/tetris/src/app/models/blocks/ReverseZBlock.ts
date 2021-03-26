@@ -7,12 +7,14 @@ export class ReverseZBlock implements IBlock {
     }
 
     currentCoordinats: number[][];
+    currentInitialPositionIndex: number;
+
     readonly color: string = "#1976d2";
     readonly maxLength: number = 2;
     readonly initialPositions: number[][][] = [
-        [[1, -1], [1, -2], [2, -2], [2, -3]],
+        [[1, -1], [2, -2], [1, -2], [2, -3]],
         [[3, -2], [2, -2], [2, -3], [1, -3]],
-        [[1, -1], [1, -2], [2, -2], [2, -3]],
+        [[1, -1], [2, -2], [1, -2], [2, -3]],
         [[3, -2], [2, -2], [2, -3], [1, -3]]
     ];
 }

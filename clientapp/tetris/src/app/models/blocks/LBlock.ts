@@ -7,6 +7,7 @@ export class LBlock implements IBlock {
     }
 
     currentCoordinats: number[][];
+    currentInitialPositionIndex: number;
     readonly color: string = "#1976d2";
     readonly maxLength: number = 3;
     readonly initialPositions: number[][][] = [
